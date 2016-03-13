@@ -194,3 +194,14 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+# Built application files
+*.exe
+
+# Generated files
+bin/
+gen/
+
+# MobileFirst
+/mobilefirst
+
