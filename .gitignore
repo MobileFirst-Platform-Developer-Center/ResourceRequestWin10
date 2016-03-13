@@ -205,3 +205,5 @@ gen/
 # MobileFirst
 /mobilefirst
 
+# Properties
+Properties/
