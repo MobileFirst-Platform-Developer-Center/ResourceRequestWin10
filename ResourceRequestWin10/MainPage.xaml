@@ -1,17 +1,17 @@
-﻿<!--
-    Copyright 2016 IBM Corp.
+<!--
+	Copyright 2016 IBM Corp.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
 -->
 <Page
     x:Class="ResourceRequestWin10.MainPage"
@@ -22,67 +22,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="MainGrid">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="WideState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="720" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="MainGrid.Margin" Value="24"/>
-                        <Setter Target="MainGrid.RowDefinitions[1].Height" Value="auto"/>
-                        <Setter Target="MainGrid.ColumnDefinitions[1].Width" Value="*"/>
-                        <Setter Target="FirstGrid.Margin" Value="0 0 6 0"/>
-                        <Setter Target="SecondGrid.Margin" Value="6 0 0 0"/>
-                        <Setter Target="SecondGrid.(Grid.Column)" Value="1"/>
-                        <Setter Target="SecondGrid.(Grid.Row)" Value="0"/>
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="NarrowState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="MainGrid.Margin" Value="12"/>
-                        <Setter Target="FirstGrid.Margin" Value="0 0 0 6"/>
-                        <Setter Target="SecondGrid.Margin" Value="0 6 0 0"/>
-                        <Setter Target="MainGrid.RowDefinitions[0].Height" Value="1.5*"/>
-                        <Setter Target="MainGrid.ColumnDefinitions[1].Width" Value="auto"/>
-                        <Setter Target="SecondGrid.(Grid.Column)" Value="0"/>
-                        <Setter Target="SecondGrid.(Grid.Row)" Value="1"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+    <Grid Background="#FFFBFAFA">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        <Border x:Name="ConsolePanel" Background="#FFFBFAFA">
+            <TextBlock x:Name="Console" HorizontalAlignment="Left" Margin="454,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="635" Width="865" Foreground="#FF383737" FontSize="30" FontFamily="Segoe WP"  DoubleTapped="ClearConsole"/>
+        </Border>
 
-        <Grid x:Name="FirstGrid" Grid.Column="0" Grid.Row="0" Background="#FF9AC8ED" Margin="0,0,6,272" >
-            <TextBox x:Name="TitleText" HorizontalAlignment="Stretch" TextWrapping="NoWrap" Text="ResourceRequest" TextAlignment="Center" VerticalAlignment="Top" IsReadOnly="True" Background="#FF818EED" Height="40" FontSize="20"/>
-            <TextBox x:Name="firstname" HorizontalAlignment="Stretch" Margin="7,51,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="FirstName" Height="40"/>
-            <TextBox x:Name="middlename" HorizontalAlignment="Stretch" Margin="7,95,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="MiddleName" Height="40"/>
-            <TextBox x:Name="lastname" HorizontalAlignment="Stretch" Margin="7,141,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="LastName" Height="40"/>
-            <TextBox x:Name="age" HorizontalAlignment="Stretch" Margin="7,185,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Age" Height="40"/>
-            <TextBox x:Name="date" HorizontalAlignment="Stretch" Margin="7,229,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Date" Height="40"/>
-            <TextBox x:Name="height" HorizontalAlignment="Stretch" Margin="7,273,6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Height" Height="40"/>
-            <Button x:Name="Submit" Content="Submit" Height="35" Margin="182,323,0,0" VerticalAlignment="Top" Width="80" Click="Submit_Click"/>
-        </Grid>
+        <Rectangle Fill="#FF3880C2" HorizontalAlignment="Left" Height="916" VerticalAlignment="Top" Width="397" Margin="0,0,0,-148"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,9,0,0" TextWrapping="Wrap" Text="ResourceRequest" VerticalAlignment="Top" Height="70" Width="397" Foreground="White" TextAlignment="Center" FontSize="30" FontFamily="Segoe WP SemiLight"/>
 
-        <Grid x:Name="SecondGrid" Grid.Column="1" Grid.Row="0" Background="WhiteSmoke" Margin="0,41,0,0" >
-            <TextBlock x:Name="Console" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Margin="0,10,0,0" />
-        </Grid>
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Margin="5,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="First Name" FontSize="20" Height="45" FontFamily="Segoe WP"/>
+        <TextBox x:Name="middlename" HorizontalAlignment="Left" Margin="5,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="Middle Name" FontSize="20" Height="45"/>
+        <TextBox x:Name="lastname" HorizontalAlignment="Left" Margin="5,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="Last Name" FontSize="20" Height="45"/>
+        <TextBox x:Name="age" HorizontalAlignment="Left" Margin="5,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="Age" FontSize="20" Height="45"/>
+        <TextBox x:Name="date" HorizontalAlignment="Left" Margin="5,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="Date" FontSize="20" Height="45"/>
+        <TextBox x:Name="height" HorizontalAlignment="Left" Margin="5,375,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="385" PlaceholderText="Height" FontSize="20" Height="45"/>
 
 
+        <Button Content="Submit" x:Name="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,482,0,0" FontSize="22" Background="#FF3880C2" Foreground="#FFF9FBFF" Height="70" Width="310" FontWeight="Normal" FontFamily="Segoe UI Semilight" Click="Submit_Click" />
+
+        <Image HorizontalAlignment="Left" Height="100" Margin="148,593,0,0" VerticalAlignment="Top" Width="100" Source="Assets/icon.png" Opacity="0.7"/>
+        <TextBlock x:Name="ConsoleTab" HorizontalAlignment="Left" Margin="453,19,0,0" TextWrapping="Wrap" Text="Console" VerticalAlignment="Top" Height="45" Width="129" FontSize="27" FontFamily="Segoe UI Semilight" TextAlignment="Center" Tapped="ShowConsole" Foreground="DodgerBlue"/>
 
     </Grid>
-
-
 </Page>

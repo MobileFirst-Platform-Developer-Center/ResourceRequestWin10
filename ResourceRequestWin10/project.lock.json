@@ -1616,7 +1616,7 @@
           "runtimes/win10-arm/native/AuthWinRT.winmd": {},
           "runtimes/win10-arm/native/AuthWinRTwp.dll": {},
           "runtimes/win10-arm/native/AuthWinRTwp.winmd": {},
-          "runtimes/win10-arm/native/AuthWinUAP.pri": {},
+          "runtimes/win10-arm/native/AuthWinUAP.dll": {},
           "runtimes/win10-arm/native/AuthWinUAP.winmd": {}
         }
       },
@@ -3310,7 +3310,7 @@
           "runtimes/win10-arm/native/AuthWinRT.winmd": {},
           "runtimes/win10-arm/native/AuthWinRTwp.dll": {},
           "runtimes/win10-arm/native/AuthWinRTwp.winmd": {},
-          "runtimes/win10-arm/native/AuthWinUAP.pri": {},
+          "runtimes/win10-arm/native/AuthWinUAP.dll": {},
           "runtimes/win10-arm/native/AuthWinUAP.winmd": {}
         }
       },
@@ -4974,7 +4974,7 @@
         "native": {
           "runtimes/win10-x64/native/AuthWinRT.dll": {},
           "runtimes/win10-x64/native/AuthWinRT.winmd": {},
-          "runtimes/win10-x64/native/AuthWinUAP.pri": {},
+          "runtimes/win10-x64/native/AuthWinUAP.dll": {},
           "runtimes/win10-x64/native/AuthWinUAP.winmd": {}
         }
       },
@@ -6671,7 +6671,7 @@
         "native": {
           "runtimes/win10-x64/native/AuthWinRT.dll": {},
           "runtimes/win10-x64/native/AuthWinRT.winmd": {},
-          "runtimes/win10-x64/native/AuthWinUAP.pri": {},
+          "runtimes/win10-x64/native/AuthWinUAP.dll": {},
           "runtimes/win10-x64/native/AuthWinUAP.winmd": {}
         }
       },
@@ -8337,7 +8337,7 @@
           "runtimes/win10-x86/native/AuthWinRT.winmd": {},
           "runtimes/win10-x86/native/AuthWinRTwp.dll": {},
           "runtimes/win10-x86/native/AuthWinRTwp.winmd": {},
-          "runtimes/win10-x86/native/AuthWinUAP.pri": {},
+          "runtimes/win10-x86/native/AuthWinUAP.dll": {},
           "runtimes/win10-x86/native/AuthWinUAP.winmd": {}
         }
       },
@@ -10036,7 +10036,7 @@
           "runtimes/win10-x86/native/AuthWinRT.winmd": {},
           "runtimes/win10-x86/native/AuthWinRTwp.dll": {},
           "runtimes/win10-x86/native/AuthWinRTwp.winmd": {},
-          "runtimes/win10-x86/native/AuthWinUAP.pri": {},
+          "runtimes/win10-x86/native/AuthWinUAP.dll": {},
           "runtimes/win10-x86/native/AuthWinUAP.winmd": {}
         }
       },
@@ -11686,7 +11686,7 @@
   },
   "libraries": {
     "IBM.MobileFirstPlatformFoundation/8.0.0": {
-      "sha512": "G63ey3XYV+/URO5qh41i9C/JODduxKjuwoQ+vjqZnzDXFutDNCHVZFtHo1pB5NoI+XrKOpmEY+mCyMa8NhYzoA==",
+      "sha512": "CzitWz2FwmoeA3XrpWeLVtPP/HnpVXIjZT55q7IeLpJ+dgCEl8iUbNyQiRRGTL5Ebl60e+Uf3JDDjP+/IjQKKw==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -11694,21 +11694,25 @@
         "build/IBM.MobileFirstPlatformFoundation.targets",
         "build/netcore45/ARM/AuthWinRT.dll",
         "build/netcore45/ARM/AuthWinRT.winmd",
+        "build/netcore45/ARM/AuthWinRTwp.dll",
+        "build/netcore45/ARM/AuthWinRTwp.winmd",
         "build/netcore45/x64/AuthWinRT.dll",
         "build/netcore45/x64/AuthWinRT.winmd",
         "build/netcore45/x86/AuthWinRT.dll",
         "build/netcore45/x86/AuthWinRT.winmd",
-        "build/wpa81/ARM/AuthWinRTwp.dll",
-        "build/wpa81/ARM/AuthWinRTwp.winmd",
-        "build/wpa81/x86/AuthWinRTwp.dll",
-        "build/wpa81/x86/AuthWinRTwp.winmd",
+        "build/netcore45/x86/AuthWinRTwp.dll",
+        "build/netcore45/x86/AuthWinRTwp.winmd",
         "content/ARM/AuthWinRT.dll",
         "content/ARM/AuthWinRT.winmd",
+        "content/ARM/AuthWinRTwp.dll",
+        "content/ARM/AuthWinRTwp.winmd",
         "content/strings/mfpclient.resw",
         "content/x64/AuthWinRT.dll",
         "content/x64/AuthWinRT.winmd",
         "content/x86/AuthWinRT.dll",
         "content/x86/AuthWinRT.winmd",
+        "content/x86/AuthWinRTwp.dll",
+        "content/x86/AuthWinRTwp.winmd",
         "IBM.MobileFirstPlatformFoundation.nuspec",
         "lib/netcore45/ARM/IBMMobileFirstPlatformFoundationWin8.dll",
         "lib/netcore45/ARM/IBMMobileFirstPlatformFoundationWin8.pri",
@@ -11717,8 +11721,10 @@
         "lib/netcore45/x64/IBMMobileFirstPlatformFoundationWin8.pri",
         "lib/netcore45/x86/IBMMobileFirstPlatformFoundationWin8.dll",
         "lib/netcore45/x86/IBMMobileFirstPlatformFoundationWin8.pri",
+        "lib/wpa81/IBMMobileFirstPlatformFoundationWin8.dll",
+        "lib/wpa81/IBMMobileFirstPlatformFoundationWin8.pri",
         "lib/wpa81/Worklight.Core.dll",
-        "package/services/metadata/core-properties/1f93598939c5405eb7ec4d2603b91722.psmdcp",
+        "package/services/metadata/core-properties/7dc8a8455fc24259af463169bdd0d2d0.psmdcp",
         "ref/uap10.0/IBMMobileFirstPlatformFoundationWin10.dll",
         "ref/uap10.0/IBMMobileFirstPlatformFoundationWin10.pri",
         "ref/uap10.0/Worklight.Core.dll",
@@ -11729,14 +11735,14 @@
         "runtimes/win10-arm/native/AuthWinRT.winmd",
         "runtimes/win10-arm/native/AuthWinRTwp.dll",
         "runtimes/win10-arm/native/AuthWinRTwp.winmd",
-        "runtimes/win10-arm/native/AuthWinUAP.pri",
+        "runtimes/win10-arm/native/AuthWinUAP.dll",
         "runtimes/win10-arm/native/AuthWinUAP.winmd",
         "runtimes/win10-x64/lib/uap10.0/IBMMobileFirstPlatformFoundationWin10.dll",
         "runtimes/win10-x64/lib/uap10.0/IBMMobileFirstPlatformFoundationWin10.pri",
         "runtimes/win10-x64/lib/uap10.0/Worklight.Core.dll",
         "runtimes/win10-x64/native/AuthWinRT.dll",
         "runtimes/win10-x64/native/AuthWinRT.winmd",
-        "runtimes/win10-x64/native/AuthWinUAP.pri",
+        "runtimes/win10-x64/native/AuthWinUAP.dll",
         "runtimes/win10-x64/native/AuthWinUAP.winmd",
         "runtimes/win10-x86/lib/uap10.0/IBMMobileFirstPlatformFoundationWin10.dll",
         "runtimes/win10-x86/lib/uap10.0/IBMMobileFirstPlatformFoundationWin10.pri",
@@ -11745,7 +11751,7 @@
         "runtimes/win10-x86/native/AuthWinRT.winmd",
         "runtimes/win10-x86/native/AuthWinRTwp.dll",
         "runtimes/win10-x86/native/AuthWinRTwp.winmd",
-        "runtimes/win10-x86/native/AuthWinUAP.pri",
+        "runtimes/win10-x86/native/AuthWinUAP.dll",
         "runtimes/win10-x86/native/AuthWinUAP.winmd",
         "tools/Init.ps1",
         "tools/install.ps1"

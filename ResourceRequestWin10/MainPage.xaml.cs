@@ -1,4 +1,4 @@
-﻿/**
+/**
 * Copyright 2016 IBM Corp.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,13 +13,17 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,11 +31,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using System.Diagnostics;
 using Worklight;
-using System.Text;
-using Windows.UI;
-
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -42,23 +42,26 @@ namespace ResourceRequestWin10
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        MainPage _this;
+
         public MainPage()
         {
             this.InitializeComponent();
+            _this = this;
         }
 
         private async void Submit_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Submit clicked");
             try
             {
                 IWorklightClient _newClient = WorklightClient.CreateInstance();
 
                 StringBuilder uriBuilder = new StringBuilder().Append("/adapters").Append("/JavaAdapter").Append("/users")
-                                                .Append("/").Append(this.firstname.Text)
-                                                .Append("/").Append(this.middlename.Text)
-                                                .Append("/").Append(this.lastname.Text);
-                
+                                            .Append("/").Append(this.firstname.Text)
+                                            .Append("/").Append(this.middlename.Text)
+                                            .Append("/").Append(this.lastname.Text);
+                ;
+
                 Debug.WriteLine(new Uri(uriBuilder.ToString(), UriKind.Relative));
 
                 WorklightResourceRequest rr = _newClient.ResourceRequest(new Uri(uriBuilder.ToString(), UriKind.Relative), "POST", "");
@@ -70,7 +73,7 @@ namespace ResourceRequestWin10
                 rr.SetHeader(headers);
 
                 Dictionary<string, string> formParams = new Dictionary<string, string>();
-                formParams.Add("height", this.date.Text);
+                formParams.Add("height", this.height.Text);
 
                 WorklightResponse resp = await rr.Send(formParams);
 
@@ -81,7 +84,6 @@ namespace ResourceRequestWin10
                 System.Diagnostics.Debug.WriteLine(resp.ResponseJSON);
 
                 this.Console.Text = resp.ResponseText;
-
             }
             catch (Exception ex)
             {
@@ -95,5 +97,10 @@ namespace ResourceRequestWin10
             Console.Text = "";
         }
 
+        private void ShowConsole(object sender, TappedRoutedEventArgs e)
+        {
+            this.ConsolePanel.Visibility = Visibility.Visible;
+            this.ConsoleTab.Foreground = new SolidColorBrush(Colors.DodgerBlue);
+        }
     }
 }
