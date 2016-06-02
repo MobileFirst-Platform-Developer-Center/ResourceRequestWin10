@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="11e46efa-a00c-4172-bf3d-d1082fc536c0"
+    Name="3235238e-4b4e-43f2-a6ea-cc5530b74785"
     Publisher="CN=worklight"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="11e46efa-a00c-4172-bf3d-d1082fc536c0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="3235238e-4b4e-43f2-a6ea-cc5530b74785" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ResourceRequestWin10</DisplayName>

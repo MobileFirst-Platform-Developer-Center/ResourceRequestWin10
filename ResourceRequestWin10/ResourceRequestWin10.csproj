@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{5B39B75C-D15B-4778-AA50-E34D5988C5CA}</ProjectGuid>
+    <ProjectGuid>{65EF1F31-2297-4D87-9A1E-1DF42B08129B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ResourceRequestWin10</RootNamespace>
@@ -92,8 +92,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <PRIResource Include="mfpclient.resw" />
     <None Include="project.json" />
+    <PRIResource Include="strings\mfpclient.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
