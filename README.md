@@ -4,7 +4,7 @@ IBM MobileFirst Platform Foundation
 A sample application demonstrating the use to the WorklightResourceRequest API in C#.
 
 ### Tutorials
-https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/using-the-mfpf-sdk/resource-request/windows
+https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/application-development/resource-request/windows
 
 ### Usage
 
